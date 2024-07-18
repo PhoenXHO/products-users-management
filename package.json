@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "sass": "sass --watch src/sass:src/app/css --no-source-map",
+    "dev": "concurrently \"npm run sass\" \"next dev\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -13,17 +14,19 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.16.4",
     "@mui/material": "^5.16.4",
+    "axios": "^1.7.2",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18",
-    "sass": "^1.77.8"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "concurrently": "^8.2.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
+    "sass": "^1.77.8",
     "typescript": "^5"
   }
 }

@@ -9,7 +9,7 @@ export default function Main({ children }: MainLayoutProps): JSX.Element {
 	return (
 		<div>
 			<AppBar />
-			{children}
+			<main>{children}</main>
 		</div>
 	);
 }
